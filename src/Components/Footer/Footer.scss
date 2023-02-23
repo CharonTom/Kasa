@@ -6,10 +6,10 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-}
 
-.footer__text {
-  font-size: 24px;
-  font-weight: 500;
-  color: white;
+  &__text {
+    font-size: 24px;
+    font-weight: 500;
+    color: white;
+  }
 }

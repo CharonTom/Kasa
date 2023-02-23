@@ -7,7 +7,7 @@ import Error from './pages/404/404'
 import Apropos from './pages/A-Propos/Apropos'
 import Header from './Components/Header/Header'
 import Footer from './Components/Footer/Footer'
-import './index.css'
+import './main.scss'
 
 ReactDOM.render(
   <React.StrictMode>

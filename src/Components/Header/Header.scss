@@ -1,0 +1,14 @@
+.nav {
+  margin: 40px 100px 0px 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  &__link a {
+    padding-left: 50px;
+    text-decoration: none;
+    color: $primary-color;
+    font-size: 24px;
+    font-weight: 500;
+  }
+}
