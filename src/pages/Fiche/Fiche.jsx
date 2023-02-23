@@ -1,5 +1,5 @@
 function Fiche() {
-  return <div>Ceci est la page fiche</div>
+  return <div className="vert">Ceci est la page fiche</div>
 }
 
 export default Fiche

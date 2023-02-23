@@ -1,5 +1,5 @@
 function Apropos() {
-  return <div>Contactez nous</div>
+  return <div className="blue">Contactez nous</div>
 }
 
 export default Apropos

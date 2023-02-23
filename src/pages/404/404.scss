@@ -1,0 +1,26 @@
+.error {
+  color: $primary-color;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+
+  &__big {
+    font-size: 288px;
+    font-weight: 700;
+    margin-top: 60px;
+  }
+
+  &__text {
+    font-size: 36px;
+    font-weight: 500;
+    margin-top: 15px;
+  }
+
+  &__link {
+    font-size: 18px;
+    font-weight: 500;
+    margin-top: 100px;
+    margin-bottom: 100px;
+    color: $primary-color;
+  }
+}

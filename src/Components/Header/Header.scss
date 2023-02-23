@@ -5,9 +5,8 @@
   align-items: center;
 
   &__link a {
+    @include link;
     padding-left: 50px;
-    text-decoration: none;
-    color: $primary-color;
     font-size: 24px;
     font-weight: 500;
   }
