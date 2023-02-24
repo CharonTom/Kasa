@@ -1,0 +1,16 @@
+@import './utils/variables.scss';
+@import './utils/mixins.scss';
+
+@import './base/base.scss';
+
+@import './pages/Home.scss';
+@import './pages/404.scss';
+@import './pages/Apropos.scss';
+@import './pages/Fiches.scss';
+
+@import './layouts/Header.scss';
+@import './layouts/Footer.scss';
+
+@import './components/banner.scss';
+@import './components/AppartmentGrid.scss';
+@import './components/Cards.scss';
