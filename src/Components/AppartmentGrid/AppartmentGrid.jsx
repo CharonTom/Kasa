@@ -1,20 +1,22 @@
-// import { useEffect, useState } from 'react'
+import { useEffect, useState } from 'react'
 import Cards from '../Cards/Cards'
 
 function Grid() {
-  // const [appartments, setAppartments] = useState([])
+  const [appartments, setAppartments] = useState([])
 
-  // useEffect(() => {
-  //   fetch('data.json')
-  //     .then((response) => response.json())
-  //     .then((data) => setAppartments(data))
-  //     .catch((error) => console.log(error))
-  // }, [])
+  useEffect(() => {
+    fetch('data.json')
+      .then((response) => response.json())
+      .then((data) => setAppartments(data))
+      .catch((error) => console.log(error))
+  }, [])
 
   return (
-    <section>
-      <Cards />
-    </section>
+    <div className="grid">
+      {appartments.map((appartment) => (
+        <Cards image={appartment.cover} title={appartment.title} />
+      ))}
+    </div>
   )
 }
 
