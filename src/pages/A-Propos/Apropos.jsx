@@ -1,9 +1,10 @@
-import BannerAbout from '../../Components/Banners/BannerAbout'
+import Banner from '../../Components/Banner/Banner'
+import about from '../../assets/about.png'
 
 function Apropos() {
   return (
     <div className="miseenpage">
-      <BannerAbout />
+      <Banner image={about} title="" />
     </div>
   )
 }

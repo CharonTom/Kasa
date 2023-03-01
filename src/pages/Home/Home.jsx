@@ -1,6 +1,7 @@
-import Banner from '../../Components/Banners/BannerHome'
+import Banner from '../../Components/Banner/Banner'
 import { useEffect, useState } from 'react'
 import Cards from '../../Components/Cards/Cards'
+import home from '../../assets/home.png'
 
 function Home() {
   const [appartments, setAppartments] = useState([])
@@ -14,7 +15,7 @@ function Home() {
 
   return (
     <section className="miseenpage">
-      <Banner />
+      <Banner image={home} title="Chez vous, partout et ailleurs" />
       <div className="grid">
         {appartments.map((appartment) => (
           <Cards image={appartment.cover} title={appartment.title} />
