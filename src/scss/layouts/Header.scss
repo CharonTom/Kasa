@@ -9,5 +9,13 @@
     padding-left: 50px;
     font-size: 24px;
     font-weight: 500;
+
+    &:hover {
+      text-decoration: underline;
+    }
+
+    &.active {
+      text-decoration: underline;
+    }
   }
 }

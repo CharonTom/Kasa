@@ -1,5 +1,11 @@
+import BannerAbout from '../../Components/Banners/BannerAbout'
+
 function Apropos() {
-  return <div className="blue">Contactez nous</div>
+  return (
+    <div className="miseenpage">
+      <BannerAbout />
+    </div>
+  )
 }
 
 export default Apropos

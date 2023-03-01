@@ -14,7 +14,7 @@ ReactDOM.render(
     <Router>
       <Header />
       <Switch>
-        <Route exact path="/">
+        <Route exact path="/acceuil">
           <Home />
         </Route>
         <Route path="/fiche">
