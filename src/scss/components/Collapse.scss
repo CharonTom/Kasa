@@ -1,0 +1,35 @@
+.collapse {
+  width: 80%;
+  margin: auto;
+  margin-bottom: 30px;
+
+  &__header {
+    background-color: $primary-color;
+    height: 47px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: white;
+    padding-left: 30px;
+    padding-right: 30px;
+
+    &__text {
+      font-size: 24px;
+    }
+
+    &__button {
+    }
+  }
+
+  &__content {
+    //position: relative;
+    transform: translate(0px, -3px);
+    background-color: $secondary-color;
+    border-radius: 0 0 10px 10px;
+    padding: 20px;
+    & p {
+      margin: 0px;
+    }
+  }
+}

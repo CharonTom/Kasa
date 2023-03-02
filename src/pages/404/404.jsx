@@ -7,7 +7,7 @@ function Error() {
       <div className="error__text">
         Oups! la page que vous demandez n'existe pas
       </div>
-      <Link to="/" className="error__link">
+      <Link to="/acceuil" className="error__link">
         Retourner sur la page d'Accueil
       </Link>
     </div>
