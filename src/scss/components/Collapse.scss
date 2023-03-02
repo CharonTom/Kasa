@@ -1,37 +1,40 @@
-.collapse {
-  width: 80%;
-  margin: auto;
-  margin-bottom: 30px;
-  overflow: hidden;
+.section__collapse {
+  margin-bottom: 200px;
+  .collapse {
+    width: 80%;
+    margin: auto;
+    margin-bottom: 30px;
+    overflow: hidden;
 
-  &__header {
-    background-color: $primary-color;
-    height: 47px;
-    border-radius: 5px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    color: white;
-    padding-left: 30px;
-    padding-right: 30px;
+    &__header {
+      background-color: $primary-color;
+      height: 47px;
+      border-radius: 5px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      color: white;
+      padding-left: 30px;
+      padding-right: 30px;
+      font-size: 25px;
 
-    &__text {
-      font-size: 24px;
+      & i {
+        cursor: pointer;
+      }
     }
 
-    // &__button {
-    // }
-  }
-
-  &__content {
-    //position: relative;
-    transform: translate(0px, -3px);
-    background-color: $secondary-color;
-    border-radius: 0 0 10px 10px;
-    padding: 20px;
-    animation: slide-out 0.5s ease-in-out;
-    & p {
-      margin: 0px;
+    &__content {
+      position: relative;
+      transform: translate(0px, -3px);
+      color: $primary-color;
+      background-color: $secondary-color;
+      border-radius: 0 0 10px 10px;
+      padding: 20px;
+      animation: slide-out 0.5s ease-in-out;
+      z-index: -1;
+      & p {
+        margin: 0px;
+      }
     }
   }
 }
@@ -39,5 +42,15 @@
 @keyframes slide-out {
   from {
     transform: translateY(-100%);
+  }
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(180deg);
   }
 }

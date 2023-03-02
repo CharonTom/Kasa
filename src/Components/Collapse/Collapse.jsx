@@ -1,28 +1,22 @@
 import { useState } from 'react'
 
-function Collapse() {
+function Collapse({ headerText, contentText }) {
   const [collapseOpen, setCollapseOpen] = useState(false)
 
   return (
     <div className="collapse">
       <div className="collapse__header">
-        <p className="collapse__header__text">coucou</p>
-        <button
+        <p className="collapse__header__text">{headerText}</p>
+
+        <i
           onClick={() => setCollapseOpen(!collapseOpen)}
-          className="collapse__header__button"
-        >
-          &lt;
-        </button>
+          className="fa-solid fa-chevron-down"
+        ></i>
       </div>
 
       {collapseOpen && (
         <div className="collapse__content">
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda,
-            quas! Est consequatur, enim labore esse nulla expedita laborum
-            eveniet recusandae nostrum nobis eum cum voluptates dolor non maxime
-            magnam! Praesentium.
-          </p>
+          <p>{contentText}</p>
         </div>
       )}
     </div>
