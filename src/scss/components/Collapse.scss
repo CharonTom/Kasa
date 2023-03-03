@@ -1,40 +1,37 @@
-.section_collapse_about {
-  margin-bottom: 200px;
-  .collapse {
-    width: 80%;
-    margin: auto;
-    margin-bottom: 30px;
-    overflow: hidden;
+.collapse {
+  width: 80%;
+  margin: auto;
+  margin-bottom: 30px;
+  overflow: hidden;
 
-    &__header {
-      background-color: $primary-color;
-      height: 47px;
-      border-radius: 5px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      color: white;
-      padding-left: 30px;
-      padding-right: 30px;
-      font-size: 25px;
+  &__header {
+    background-color: $primary-color;
+    height: 47px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: white;
+    padding-left: 30px;
+    padding-right: 30px;
+    font-size: 25px;
 
-      & i {
-        cursor: pointer;
-      }
+    & i {
+      cursor: pointer;
     }
+  }
 
-    &__content {
-      position: relative;
-      transform: translate(0px, -3px);
-      color: $primary-color;
-      background-color: $secondary-color;
-      border-radius: 0 0 10px 10px;
-      padding: 20px;
-      animation: slide-out 0.5s ease-in-out;
-      z-index: -1;
-      & p {
-        margin: 0px;
-      }
+  &__content {
+    position: relative;
+    transform: translate(0px, -3px);
+    color: $primary-color;
+    background-color: $secondary-color;
+    border-radius: 0 0 10px 10px;
+    padding: 20px;
+    animation: slide-out 0.5s ease-in-out;
+    z-index: -1;
+    & p {
+      margin: 0px;
     }
   }
 }

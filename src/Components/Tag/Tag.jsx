@@ -1,5 +1,9 @@
 function Tag() {
-  return <div></div>
+  return (
+    <div className="tag">
+      <span>TagTag</span>
+    </div>
+  )
 }
 
 export default Tag

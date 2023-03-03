@@ -20,21 +20,25 @@ function Fiche() {
   return (
     <div className="miseenpage">
       <Carrousel />
-      <section className="section__undercarrousel">
+      <section className="section_undercarrousel">
         <div>
           <h1>Title Cozy Loft on the canal saint-martin</h1>
           <p>Location Paris blabla</p>
-          <Tag />
+          <div className="section_tag">
+            <Tag />
+            <Tag />
+            <Tag />
+          </div>
         </div>
         <div>
           <Host />
           <Rating />
         </div>
       </section>
-      <div className="section_collapse_fiche">
+      <section className="section_collapse_fiche">
         <Collapse contentText={'coucou'} headerText={'coucou'} />
         <Collapse contentText={'coucou'} headerText={'coucou'} />
-      </div>
+      </section>
     </div>
   )
 }
