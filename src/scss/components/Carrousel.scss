@@ -1,0 +1,13 @@
+.section__carrousel {
+  height: 415px;
+  width: 100%;
+  border: solid $primary-color 2px;
+  border-radius: 25px;
+
+  & img {
+    height: 100%;
+    width: 100%;
+    border-radius: 25px;
+    object-fit: cover;
+  }
+}

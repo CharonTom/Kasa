@@ -16,7 +16,7 @@ function Apropos() {
   return (
     <div className="miseenpage">
       <Banner image={about} title="" />
-      <section className="section__collapse">
+      <section className="section_collapse_about">
         {dataCollapses.map((dataCollapse) => (
           <Collapse
             contentText={dataCollapse.aboutText}
