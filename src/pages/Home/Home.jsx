@@ -18,8 +18,12 @@ function Home() {
     <section className="miseenpage">
       <Banner image={home} title="Chez vous, partout et ailleurs" />
       <div className="grid">
-        {appartments.map((appartment, id) => (
-          <Link key={id} className="link-card" to={`/fiche/${appartment.id}`}>
+        {appartments.map((appartment) => (
+          <Link
+            key={appartment.id}
+            className="link-card"
+            to={`/fiche/${appartment.id}`}
+          >
             <Cards image={appartment.cover} title={appartment.title} />
           </Link>
         ))}
