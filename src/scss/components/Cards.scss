@@ -6,7 +6,7 @@
   background-color: $secondary-color;
   border-radius: 25px;
 
-  &__card {
+  & .link-card {
     height: 340px;
     border-radius: 10px;
     flex-grow: 1;
@@ -14,11 +14,10 @@
     min-width: 240px;
     position: relative;
 
-    &__a {
-      display: flex;
+    & .grid-card {
       height: 100%;
       width: 100%;
-
+      border-radius: 10px;
       &::after {
         content: '';
         position: absolute;

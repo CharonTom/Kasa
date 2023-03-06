@@ -1,7 +1,7 @@
-function Tag() {
+function Tag({ tag }) {
   return (
     <div className="tag">
-      <span>TagTag</span>
+      <span>{tag}</span>
     </div>
   )
 }

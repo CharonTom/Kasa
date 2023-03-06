@@ -2,6 +2,7 @@ import Banner from '../../Components/Banner/Banner'
 import { useEffect, useState } from 'react'
 import Cards from '../../Components/Cards/Cards'
 import home from '../../assets/home.png'
+import { Link } from 'react-router-dom'
 
 function Home() {
   const [appartments, setAppartments] = useState([])
@@ -17,8 +18,10 @@ function Home() {
     <section className="miseenpage">
       <Banner image={home} title="Chez vous, partout et ailleurs" />
       <div className="grid">
-        {appartments.map((appartment) => (
-          <Cards image={appartment.cover} title={appartment.title} />
+        {appartments.map((appartment, id) => (
+          <Link key={id} className="link-card" to={`/fiche/${appartment.id}`}>
+            <Cards image={appartment.cover} title={appartment.title} />
+          </Link>
         ))}
       </div>
     </section>

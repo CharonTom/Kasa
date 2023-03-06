@@ -1,5 +1,5 @@
 import React from 'react'
-import ReactDOM from 'react-dom'
+import ReactDOM from 'react-dom/client'
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
 import Home from './pages/Home/Home'
 import Fiche from './pages/Fiche/Fiche'
@@ -9,7 +9,8 @@ import Header from './Components/Header/Header'
 import Footer from './Components/Footer/Footer'
 import '../src/scss/main.scss'
 
-ReactDOM.render(
+const root = ReactDOM.createRoot(document.getElementById('root'))
+root.render(
   <React.StrictMode>
     <Router>
       <Header />
@@ -17,7 +18,7 @@ ReactDOM.render(
         <Route exact path="/acceuil">
           <Home />
         </Route>
-        <Route path="/fiche">
+        <Route path="/fiche/:id">
           <Fiche />
         </Route>
         <Route path="/about">
@@ -29,6 +30,5 @@ ReactDOM.render(
       </Switch>
       <Footer />
     </Router>
-  </React.StrictMode>,
-  document.getElementById('root')
+  </React.StrictMode>
 )
