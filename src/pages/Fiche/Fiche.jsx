@@ -7,7 +7,8 @@ import { useParams } from 'react-router-dom'
 import { useEffect, useState } from 'react'
 
 function Fiche() {
-  const idLogement = useParams('id').id
+  const idLogement = useParams()
+  console.log(idLogement)
 
   const [ficheAppartments, ficheSetAppartments] = useState([])
   const dataCurrentAppartment = ficheAppartments.find(
