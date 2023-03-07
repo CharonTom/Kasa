@@ -2,22 +2,20 @@ import Banner from '../../Components/Banner/Banner'
 import about from '../../assets/about.png'
 import Collapse from '../../Components/Collapse/Collapse'
 import { useEffect, useState } from 'react'
+import axios from 'axios'
 
 function Apropos() {
-  const [dataCollapses, setDataCollapse] = useState([])
+  const [data, setData] = useState([])
 
   useEffect(() => {
-    fetch('data/collapsedata.json')
-      .then((response) => response.json())
-      .then((data) => setDataCollapse(data))
-      .catch((error) => console.log(error))
+    axios.get('data/collapsedata.json').then((res) => setData(res.data)) //requète AXIOS pour prochaine utilisation API
   }, [])
 
   return (
     <div className="miseenpage">
       <Banner image={about} title="" />
       <section className="section_collapse_about">
-        {dataCollapses.map((dataCollapse, index) => (
+        {data.map((dataCollapse, index) => (
           <Collapse
             key={`${dataCollapse}-${index}`}
             contentText={dataCollapse.aboutText}

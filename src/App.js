@@ -1,5 +1,5 @@
 import React from 'react'
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
+import { Routes, Route } from 'react-router-dom'
 
 import Home from './pages/Home/Home'
 import Fiche from './pages/Fiche/Fiche'
@@ -12,24 +12,16 @@ import '../src/scss/main.scss'
 
 function App() {
   return (
-    <Router>
+    <>
       <Header />
-      <Switch>
-        <Route exact path="/acceuil">
-          <Home />
-        </Route>
-        <Route path="/fiche/:id">
-          <Fiche />
-        </Route>
-        <Route path="/about">
-          <Apropos />
-        </Route>
-        <Route>
-          <Error />
-        </Route>
-      </Switch>
+      <Routes>
+        <Route path="/" element={<Home />}></Route>
+        <Route path="fiche" element={<Fiche />} />
+        <Route path="about" element={<Apropos />}></Route>
+        <Route path="*" element={<Error />} />
+      </Routes>
       <Footer />
-    </Router>
+    </>
   )
 }
 export default App

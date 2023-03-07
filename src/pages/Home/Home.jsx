@@ -1,5 +1,6 @@
 import Banner from '../../Components/Banner/Banner'
 import { useEffect, useState } from 'react'
+import axios from 'axios'
 import Cards from '../../Components/Cards/Cards'
 import home from '../../assets/home.png'
 import { Link } from 'react-router-dom'
@@ -8,10 +9,7 @@ function Home() {
   const [appartments, setAppartments] = useState([])
 
   useEffect(() => {
-    fetch('data/data.json')
-      .then((response) => response.json())
-      .then((data) => setAppartments(data))
-      .catch((error) => console.log(error))
+    axios.get('data/data.json').then((res) => setAppartments(res.data)) //requète AXIOS pour prochaine utilisation API
   }, [])
 
   return (
@@ -19,11 +17,7 @@ function Home() {
       <Banner image={home} title="Chez vous, partout et ailleurs" />
       <div className="grid">
         {appartments.map((appartment) => (
-          <Link
-            key={appartment.id}
-            className="link-card"
-            to={`/fiche/${appartment.id}`}
-          >
+          <Link key={appartment.id} className="link-card" to={`/fiche`}>
             <Cards image={appartment.cover} title={appartment.title} />
           </Link>
         ))}

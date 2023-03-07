@@ -5,22 +5,17 @@ import Rating from '../../Components/Rating/Rating'
 import Tag from '../../Components/Tag/Tag'
 import { useParams } from 'react-router-dom'
 import { useEffect, useState } from 'react'
+import axios from 'axios'
 
 function Fiche() {
-  const idLogement = useParams()
-  console.log(idLogement)
-
-  const [ficheAppartments, ficheSetAppartments] = useState([])
-  const dataCurrentAppartment = ficheAppartments.find(
-    (appartement) => appartement.id === idLogement
-  )
+  const { id } = useParams()
+  const [data, setData] = useState([])
 
   useEffect(() => {
-    fetch('data/data.json')
-      .then((response) => response.json())
-      .then((data) => ficheSetAppartments(data))
-      .catch((error) => console.log(error))
+    axios.get(`data/data.json`).then((res) => setData(res.data)) //requète AXIOS pour prochaine utilisation API
   }, [])
+  console.log()
+  console.log(data)
 
   return (
     <div className="miseenpage">

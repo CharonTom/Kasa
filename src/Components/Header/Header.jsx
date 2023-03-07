@@ -5,11 +5,11 @@ import { NavLink } from 'react-router-dom'
 function Header() {
   return (
     <nav className="nav">
-      <Link to="/acceuil">
+      <Link to="/">
         <img src={Logo} alt="Logo" className="nav__img" />
       </Link>
       <div className="nav__link">
-        <NavLink to="/acceuil">Accueil</NavLink>
+        <NavLink to="/">Accueil</NavLink>
         <NavLink to="/about">A Propos</NavLink>
       </div>
     </nav>
