@@ -9,13 +9,14 @@ import axios from 'axios'
 
 function Fiche() {
   const { id } = useParams()
-  const [data, setData] = useState([])
+  const [dataAppartment, setDataAppartment] = useState([])
 
   useEffect(() => {
-    axios.get(`data/data.json`).then((res) => setData(res.data)) //requète AXIOS pour prochaine utilisation API
+    axios.get(`data/data.json`).then((res) => setDataAppartment(res.data)) //requète AXIOS pour prochaine utilisation API
   }, [])
-  console.log()
-  console.log(data)
+
+  const appart = dataAppartment.find((appart) => appart.id === id)
+  console.log(appart)
 
   return (
     <div className="miseenpage">

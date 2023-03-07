@@ -17,7 +17,11 @@ function Home() {
       <Banner image={home} title="Chez vous, partout et ailleurs" />
       <div className="grid">
         {appartments.map((appartment) => (
-          <Link key={appartment.id} className="link-card" to={`/fiche`}>
+          <Link
+            key={appartment.id}
+            className="link-card"
+            to={`${appartment.id}`}
+          >
             <Cards image={appartment.cover} title={appartment.title} />
           </Link>
         ))}
