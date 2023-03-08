@@ -1,10 +1,8 @@
-import home from '../../assets/home.png'
-
-function Host() {
+function Host({ name, picture }) {
   return (
     <div className="host">
-      <p className="host__name">Alexander Dumas</p>
-      <img className="host__portrait" src={home} alt="portrait" />
+      <p className="host__name">{name}</p>
+      <img className="host__portrait" src={picture} alt="portrait" />
     </div>
   )
 }

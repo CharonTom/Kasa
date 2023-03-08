@@ -8,35 +8,43 @@ import { useEffect, useState } from 'react'
 import axios from 'axios'
 
 function Fiche() {
+  /*-----------------Récuperation des donnés du logement selectionné--------------*/
   const { id } = useParams()
   const [dataAppartment, setDataAppartment] = useState([])
-
   useEffect(() => {
     axios.get(`data/data.json`).then((res) => setDataAppartment(res.data)) //requète AXIOS pour prochaine utilisation API
   }, [])
-
   const appart = dataAppartment.find((appart) => appart.id === id)
-  console.log(appart)
+
+  /*-----------------Equipement------------------ */
+  const equipLogement = appart?.equipments.map((equip, index) => {
+    return <li key={index}>{equip}</li>
+  })
 
   return (
     <div className="miseenpage">
       <Carrousel />
       <section className="section_undercarrousel">
         <div>
-          <h1>{'Title Cozy Loft on the canal saint-martin'}</h1>
-          <p>{'Location Paris blabla'}</p>
+          <h1>{appart?.title}</h1>
+          <p>{appart?.location}</p>
           <div className="section_tag">
-            <Tag tag={'coucou'} />
+            {appart?.tags.map((apparttag, index) => (
+              <Tag key={index} tag={apparttag} />
+            ))}
           </div>
         </div>
         <div>
-          <Host />
-          <Rating />
+          <Host name={appart?.host.name} picture={appart?.host.picture} />
+          <Rating score={appart?.rating} />
         </div>
       </section>
       <section className="section_collapse_fiche">
-        <Collapse contentText={'coucou'} headerText={'coucou'} />
-        <Collapse contentText={'coucou'} headerText={'coucou'} />
+        <Collapse
+          headerText={'Description'}
+          contentText={appart?.description}
+        />
+        <Collapse headerText={'Equipement'} contentText={equipLogement} />
       </section>
     </div>
   )
