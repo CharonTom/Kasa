@@ -16,8 +16,13 @@
     padding-right: 30px;
     font-size: 25px;
 
-    & i {
+    &__arrow {
       cursor: pointer;
+    }
+
+    &__arrow.true {
+      transform: rotate(-180deg);
+      transition: 0.3s;
     }
   }
 
@@ -28,7 +33,7 @@
     background-color: $secondary-color;
     border-radius: 0 0 10px 10px;
     padding: 20px;
-    animation: slide-out 0.5s ease-in-out;
+    //animation: slide-out 0.5s ease-in-out;
     z-index: -1;
     & p {
       margin: 0px;
@@ -36,18 +41,8 @@
   }
 }
 
-@keyframes slide-out {
-  from {
-    transform: translateY(-100%);
-  }
-}
-
-@keyframes rotate {
-  0% {
-    transform: rotate(0deg);
-  }
-
-  100% {
-    transform: rotate(180deg);
-  }
-}
+// @keyframes slide-out {
+//   from {
+//     transform: translateY(-100%);
+//   }
+// }

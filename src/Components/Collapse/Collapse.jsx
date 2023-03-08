@@ -7,11 +7,12 @@ function Collapse({ headerText, contentText }) {
     <div className="collapse">
       <div className="collapse__header">
         <p className="collapse__header__text">{headerText}</p>
-
-        <i
+        <div
+          className={`collapse__header__arrow ${collapseOpen}`}
           onClick={() => setCollapseOpen(!collapseOpen)}
-          className="fa-solid fa-chevron-down"
-        ></i>
+        >
+          <i className="fa-solid fa-chevron-down"></i>
+        </div>
       </div>
 
       {collapseOpen && (
