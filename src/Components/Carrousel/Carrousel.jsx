@@ -14,6 +14,8 @@ function Carrousel() {
   return (
     <div className="section__carrousel">
       <img src={home} alt="Carrousel" />
+      <i class="fa-sharp fa-solid fa-chevron-left"></i>
+      <i class="fa-sharp fa-solid fa-chevron-right"></i>
     </div>
   )
 }
