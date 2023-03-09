@@ -27,14 +27,7 @@ function Carrousel({ galleryImg }) {
         </div>
       )}
       {galleryImg?.map((gallery, index) => (
-        <div
-          key={index} // mise en place du slider avec affichage conditionnel et opacity=1 quand le slide en cours vaut l'index
-          // className={
-          //   imgAfficher === index
-          //     ? 'slider bl-msk wh-msk active-anim'
-          //     : 'slider bl-msk wh-msk'
-          // }
-        >
+        <div key={index}>
           {index === imgAfficher && (
             <img src={gallery} alt="appartement à louer" />
           )}

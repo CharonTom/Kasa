@@ -10,6 +10,7 @@ function Apropos() {
   useEffect(() => {
     axios.get('data/collapsedata.json').then((res) => setData(res.data)) //requète AXIOS pour prochaine utilisation API
   }, [])
+  console.log(data)
 
   return (
     <div className="miseenpage">
@@ -20,6 +21,7 @@ function Apropos() {
             key={`${dataCollapse}-${index}`}
             contentText={dataCollapse.aboutText}
             headerText={dataCollapse.aboutTitle}
+            page={'about'}
           />
         ))}
       </section>

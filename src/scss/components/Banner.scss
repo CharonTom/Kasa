@@ -5,6 +5,9 @@
   border-radius: 25px;
   margin-bottom: 40px;
   position: relative;
+  @media (max-width: 600px) {
+    margin-bottom: 20px;
+  }
 
   & h1 {
     color: white;

@@ -1,10 +1,10 @@
 import { useState } from 'react'
 
-function Collapse({ headerText, contentText }) {
+function Collapse({ headerText, contentText, page }) {
   const [collapseOpen, setCollapseOpen] = useState(false)
 
   return (
-    <div className="collapse">
+    <div className={`collapse${page ? ' ' + page : ''}`}>
       <div className="collapse__header">
         <p className="collapse__header__text">{headerText}</p>
         <div

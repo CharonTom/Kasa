@@ -5,6 +5,12 @@
   gap: 60px;
   background-color: $secondary-color;
   border-radius: 25px;
+  @media (max-width: 600px) {
+    padding: 0px;
+    gap: 20px;
+    background-color: #ffffff;
+    flex-direction: column;
+  }
 
   & .link-card {
     height: 340px;
@@ -13,6 +19,9 @@
     flex-basis: 25%;
     min-width: 240px;
     position: relative;
+    @media (max-width: 600px) {
+      height: 255px;
+    }
 
     & .grid-card {
       height: 100%;

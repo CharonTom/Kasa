@@ -14,7 +14,7 @@ function RoutePath() {
       <Header />
       <Routes>
         <Route path="/" element={<Home />}></Route>
-        <Route path="/fiche/:id" element={<Fiche />} />
+        <Route path="fiche/:id" element={<Fiche />} />
         <Route path="about" element={<Apropos />}></Route>
         <Route path="*" element={<Error />} />
       </Routes>
