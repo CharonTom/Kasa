@@ -12,9 +12,12 @@ function Fiche() {
   const { id } = useParams()
   const [dataAppartment, setDataAppartment] = useState([])
   useEffect(() => {
-    axios.get(`data/data.json`).then((res) => setDataAppartment(res.data)) //requète AXIOS pour prochaine utilisation API
+    axios
+      .get(`http://localhost:3000/data/data.json`)
+      .then((res) => setDataAppartment(res.data)) //requète AXIOS pour prochaine utilisation API
   }, [])
   const appart = dataAppartment.find((appart) => appart.id === id)
+  console.log(dataAppartment)
 
   /*-----------------Equipement------------------ */
   const equipLogement = appart?.equipments.map((equip, index) => {
@@ -23,7 +26,7 @@ function Fiche() {
 
   return (
     <div className="miseenpage">
-      <Carrousel />
+      <Carrousel galleryImg={appart?.pictures} />
       <section className="section_undercarrousel">
         <div>
           <h1>{appart?.title}</h1>

@@ -1,22 +1,51 @@
-//import { useEffect, useState } from 'react'
-import home from '../../assets/home.png'
+import { useState } from 'react'
 
-function Carrousel() {
-  // const [appartments, setAppartments] = useState([])
+function Carrousel({ galleryImg }) {
+  const [imgAfficher, changerImg] = useState(0)
+  const nombreImg = galleryImg?.length
 
-  // useEffect(() => {
-  //   fetch('data/data.json')
-  //     .then((response) => response.json())
-  //     .then((data) => setAppartments(data))
-  //     .catch((error) => console.log(error))
-  // }, [])
+  console.log(nombreImg)
+
+  const nextSlide = () => {
+    changerImg(imgAfficher === nombreImg - 1 ? 0 : imgAfficher + 1) // on repart au premier slide quand on arrive au dernier
+  }
+  const prevSlide = () => {
+    changerImg(imgAfficher === 0 ? nombreImg - 1 : imgAfficher - 1) // on repart au dernier slide quand on est au premier
+  }
 
   return (
-    <div className="section__carrousel">
-      <img src={home} alt="Carrousel" />
-      <i class="fa-sharp fa-solid fa-chevron-left"></i>
-      <i class="fa-sharp fa-solid fa-chevron-right"></i>
-    </div>
+    <section className="section__carrousel">
+      {nombreImg > 1 && (
+        <div className="section__carrousel__left" onClick={prevSlide}>
+          <i className="fa-sharp fa-solid fa-chevron-left left"></i>
+        </div>
+      )}
+
+      {nombreImg > 1 && (
+        <div className="section__carrousel__right" onClick={nextSlide}>
+          <i className="fa-sharp fa-solid fa-chevron-right  right"></i>
+        </div>
+      )}
+      {galleryImg?.map((gallery, index) => (
+        <div
+          key={index} // mise en place du slider avec affichage conditionnel et opacity=1 quand le slide en cours vaut l'index
+          // className={
+          //   imgAfficher === index
+          //     ? 'slider bl-msk wh-msk active-anim'
+          //     : 'slider bl-msk wh-msk'
+          // }
+        >
+          {index === imgAfficher && (
+            <img src={gallery} alt="appartement à louer" />
+          )}
+          {index === imgAfficher && (
+            <span className="section__carrousel__number">
+              {imgAfficher + 1}/{nombreImg}
+            </span>
+          )}
+        </div>
+      ))}
+    </section>
   )
 }
 

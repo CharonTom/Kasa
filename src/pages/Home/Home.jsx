@@ -20,7 +20,7 @@ function Home() {
           <Link
             key={appartment.id}
             className="link-card"
-            to={`${appartment.id}`}
+            to={`/fiche/${appartment.id}`}
           >
             <Cards image={appartment.cover} title={appartment.title} />
           </Link>
