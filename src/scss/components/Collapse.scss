@@ -3,9 +3,11 @@
 }
 
 .collapse {
-  width: 80%;
   margin-bottom: 30px;
   overflow: hidden;
+  @media (max-width: 600px) {
+    margin-bottom: 20px;
+  }
 
   &__header {
     background-color: $primary-color;
@@ -15,9 +17,13 @@
     align-items: center;
     justify-content: space-between;
     color: white;
-    padding-left: 30px;
-    padding-right: 30px;
-    font-size: 25px;
+    padding: 0 25px 0 20px;
+    font-size: 24px;
+    @media (max-width: 600px) {
+      font-size: 13px;
+      height: 30px;
+      padding: 0 10px 0 10px;
+    }
 
     &__arrow {
       cursor: pointer;
@@ -39,6 +45,9 @@
     z-index: -1;
     & p {
       margin: 0px;
+      @media (max-width: 600px) {
+        font-size: 12px;
+      }
     }
   }
 }

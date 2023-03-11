@@ -7,6 +7,7 @@
   position: relative;
   @media (max-width: 600px) {
     margin-bottom: 20px;
+    border-radius: 10px;
   }
 
   & h1 {
@@ -22,5 +23,8 @@
     border-radius: 25px;
     object-fit: cover;
     filter: brightness(0.6);
+    @media (max-width: 600px) {
+      border-radius: 10px;
+    }
   }
 }
