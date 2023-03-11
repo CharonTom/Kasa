@@ -37,7 +37,7 @@ function Fiche() {
             ))}
           </div>
         </div>
-        <div>
+        <div className="section_undercarrousel__hostAndRate">
           <Host name={appart?.host.name} picture={appart?.host.picture} />
           <Rating score={appart?.rating} />
         </div>

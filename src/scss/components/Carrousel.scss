@@ -5,18 +5,28 @@
   position: relative;
   color: rgb(255, 255, 255);
   font-size: 80px;
+  @media (max-width: 768px) {
+    font-size: 20px;
+    height: 255px;
+  }
 
   &__left {
     position: absolute;
     top: 40%;
     left: 2%;
     cursor: pointer;
+    @media (max-width: 768px) {
+      top: 45%;
+    }
   }
   &__right {
     position: absolute;
     top: 40%;
     right: 2%;
     cursor: pointer;
+    @media (max-width: 768px) {
+      top: 45%;
+    }
   }
 
   & img {
@@ -24,6 +34,9 @@
     width: 100%;
     border-radius: 25px;
     object-fit: cover;
+    @media (max-width: 768px) {
+      height: 255px;
+    }
   }
 
   &__number {

@@ -14,7 +14,11 @@ function Home() {
 
   return (
     <section className="miseenpage">
-      <Banner image={home} title="Chez vous, partout et ailleurs" />
+      <Banner
+        image={home}
+        title="Chez vous, partout et ailleurs"
+        page={'acceuil'}
+      />
       <div className="grid">
         {appartments.map((appartment) => (
           <Link
