@@ -1,23 +1,27 @@
 .grid {
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
   padding: 50px;
   gap: 60px;
   background-color: $secondary-color;
   border-radius: 25px;
+  @media (max-width: 1200px) {
+    grid-template-columns: 1fr 1fr;
+    gap: 45px;
+  }
+  @media (max-width: 860px) {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
   @media (max-width: 768px) {
     padding: 0 0 50px 0;
     gap: 20px;
     background-color: #ffffff;
-    flex-direction: column;
   }
 
   & .link-card {
     height: 340px;
     border-radius: 10px;
-    flex-grow: 1;
-    flex-basis: 25%;
-    min-width: 240px;
     position: relative;
     @media (max-width: 768px) {
       height: 255px;
