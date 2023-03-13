@@ -4,7 +4,8 @@
   padding: 50px;
   gap: 60px;
   background-color: $secondary-color;
-  border-radius: 25px;
+  border-radius: 10px;
+
   @media (max-width: 1200px) {
     grid-template-columns: 1fr 1fr;
     gap: 45px;
@@ -20,32 +21,17 @@
   }
 
   & .link-card {
-    height: 340px;
-    border-radius: 10px;
     position: relative;
-    @media (max-width: 768px) {
-      height: 255px;
-    }
 
     & .grid-card {
       height: 340px;
-      width: 100%;
-      border-radius: 10px;
+      overflow: hidden;
+      &:hover {
+        background: linear-gradient(180deg, #ff6060 85%, #000000a6 100%);
+        border-radius: 10px;
+      }
       @media (max-width: 768px) {
         height: 255px;
-      }
-      &__filter {
-        position: absolute;
-        inset: 0;
-        width: 100%;
-        height: 100%;
-        background-image: linear-gradient(#ffffff, #000000 50%);
-        opacity: 0.3;
-        border-radius: 10px;
-        &:hover {
-          background: linear-gradient(180deg, #ff6060 85%, #000000a6 100%);
-          opacity: 0.6;
-        }
       }
 
       &__img {
@@ -53,6 +39,19 @@
         height: 100%;
         object-fit: cover;
         border-radius: 10px;
+        //   transition: 0.9s;
+      }
+      &__filter {
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(180deg, #ffffff00 0%, #00000080 100%);
+        opacity: 0.7;
+        border-radius: 10px;
+      }
+
+      &:hover > img {
+        opacity: 0.3;
+        scale: 1.02;
       }
 
       & h2 {
@@ -62,7 +61,6 @@
         position: absolute;
         bottom: 0%;
         color: white;
-        z-index: 1;
       }
     }
   }
