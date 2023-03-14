@@ -3,21 +3,11 @@ import Collapse from '../../Components/Collapse/Collapse'
 import Host from '../../Components/Host/Host'
 import Rating from '../../Components/Rating/Rating'
 import Tag from '../../Components/Tag/Tag'
-import { useParams } from 'react-router-dom'
-import { useEffect, useState } from 'react'
-import axios from 'axios'
+import { useLoaderData } from 'react-router-dom'
 
 function Fiche() {
   /*-----------------Récuperation des donnés du logement selectionné--------------*/
-  const { id } = useParams()
-  const [dataAppartment, setDataAppartment] = useState([])
-  useEffect(() => {
-    axios
-      .get(`http://localhost:3000/data/data.json`)
-      .then((res) => setDataAppartment(res.data)) //requète AXIOS pour prochaine utilisation API
-  }, [])
-  const appart = dataAppartment.find((appart) => appart.id === id)
-  console.log(dataAppartment)
+  const { appart } = useLoaderData()
 
   /*-----------------Equipement------------------ */
   const equipLogement = appart?.equipments.map((equip, index) => {

@@ -10,7 +10,6 @@ function Apropos() {
   useEffect(() => {
     axios.get('data/collapsedata.json').then((res) => setData(res.data)) //requète AXIOS pour prochaine utilisation API
   }, [])
-  console.log(data)
 
   return (
     <div className="miseenpage">

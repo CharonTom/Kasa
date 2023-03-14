@@ -1,9 +1,10 @@
 import React from 'react'
+import { RouterProvider } from 'react-router-dom'
+import rooter from './router'
 //import '../src/scss/main.scss'
 import '../src/css/style.css'
-import RoutePath from './Routes/RoutePath'
 
 function App() {
-  return <RoutePath />
+  return <RouterProvider router={rooter} />
 }
 export default App

@@ -4,8 +4,6 @@ function Carrousel({ galleryImg }) {
   const [imgAfficher, changerImg] = useState(0)
   const nombreImg = galleryImg?.length
 
-  console.log(nombreImg)
-
   const nextSlide = () => {
     changerImg(imgAfficher === nombreImg - 1 ? 0 : imgAfficher + 1) // on repart au premier slide quand on arrive au dernier
   }
