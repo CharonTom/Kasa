@@ -12,20 +12,21 @@ import axios from 'axios'
 
 const rooter = createBrowserRouter(
   createRoutesFromElements(
-    <Route path="" element={<Layouts />}>
+    <Route path="/" element={<Layouts />}>
       <Route
-        exact
-        path="/"
+        index
         element={<Home />}
         loader={async () => {
-          const { data } = await axios.get(`data/data.json`)
+          const { data } = await axios.get(
+            `http://localhost:3000/data/data.json`
+          )
+
           if (data === undefined || data === null) {
             throw new Response('not found', { status: 404 })
           }
           return { data }
         }}
       ></Route>
-
       <Route
         path="/fiche/:id"
         element={<Fiche />}
@@ -46,12 +47,14 @@ const rooter = createBrowserRouter(
         }}
         errorElement={<Error />}
       />
-
       <Route
         path="about"
         element={<Apropos />}
         loader={async () => {
-          const { data } = await axios.get(`data/collapseData.json`)
+          const { data } = await axios.get(
+            `http://localhost:3000/data/collapseData.json`
+          )
+
           if (data === undefined || data === null) {
             throw new Response('not found', { status: 404 })
           }
