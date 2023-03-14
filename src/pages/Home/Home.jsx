@@ -1,17 +1,11 @@
 import Banner from '../../Components/Banner/Banner'
-import { useEffect, useState } from 'react'
-import axios from 'axios'
+import { useLoaderData } from 'react-router-dom'
 import Cards from '../../Components/Cards/Cards'
 import home from '../../assets/home.png'
 import { Link } from 'react-router-dom'
 
 function Home() {
-  const [appartments, setAppartments] = useState([])
-
-  useEffect(() => {
-    axios.get('data/data.json').then((res) => setAppartments(res.data)) //requète AXIOS pour prochaine utilisation API
-  }, [])
-
+  const { data } = useLoaderData()
   return (
     <section className="miseenpage">
       <Banner
@@ -20,7 +14,7 @@ function Home() {
         page={'acceuil'}
       />
       <div className="grid">
-        {appartments.map((appartment) => (
+        {data.map((appartment) => (
           <Link
             key={appartment.id}
             className="link-card"
