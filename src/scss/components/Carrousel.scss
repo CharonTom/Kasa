@@ -40,6 +40,13 @@
   }
 
   &__number {
-    display: none;
+    position: absolute;
+    bottom: 0%;
+    left: 47%;
+    font-size: 24px;
+
+    @media (max-width: 768px) {
+      display: none;
+    }
   }
 }
