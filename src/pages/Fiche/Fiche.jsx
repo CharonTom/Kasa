@@ -10,33 +10,30 @@ function Fiche() {
   const { appart } = useLoaderData()
 
   /*-----------------Equipement------------------ */
-  const equipLogement = appart?.equipments.map((equip, index) => {
+  const equipLogement = appart.equipments.map((equip, index) => {
     return <li key={index}>{equip}</li>
   })
 
   return (
     <div className="miseenpage">
-      <Carrousel galleryImg={appart?.pictures} />
+      <Carrousel galleryImg={appart.pictures} />
       <section className="section_undercarrousel">
         <div>
-          <h1>{appart?.title}</h1>
-          <p>{appart?.location}</p>
+          <h1>{appart.title}</h1>
+          <p>{appart.location}</p>
           <div className="section_tag">
-            {appart?.tags.map((apparttag, index) => (
+            {appart.tags.map((apparttag, index) => (
               <Tag key={index} tag={apparttag} />
             ))}
           </div>
         </div>
         <div className="section_undercarrousel__hostAndRate">
-          <Host name={appart?.host.name} picture={appart?.host.picture} />
-          <Rating score={appart?.rating} />
+          <Host name={appart.host.name} picture={appart.host.picture} />
+          <Rating score={appart.rating} />
         </div>
       </section>
       <section className="section_collapse_fiche">
-        <Collapse
-          headerText={'Description'}
-          contentText={appart?.description}
-        />
+        <Collapse headerText={'Description'} contentText={appart.description} />
         <Collapse headerText={'Equipement'} contentText={equipLogement} />
       </section>
     </div>
