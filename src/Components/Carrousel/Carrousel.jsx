@@ -2,7 +2,7 @@ import { useState } from 'react'
 
 function Carrousel({ galleryImg }) {
   const [imgAfficher, changerImg] = useState(0)
-  const nombreImg = galleryImg?.length
+  const nombreImg = galleryImg.length
 
   const nextSlide = () => {
     changerImg(imgAfficher === nombreImg - 1 ? 0 : imgAfficher + 1) // on repart au premier slide quand on arrive au dernier
@@ -24,7 +24,7 @@ function Carrousel({ galleryImg }) {
           <i className="fa-sharp fa-solid fa-chevron-right  right"></i>
         </div>
       )}
-      {galleryImg?.map((gallery, index) => (
+      {galleryImg.map((gallery, index) => (
         <div key={index}>
           {index === imgAfficher && (
             <img src={gallery} alt="appartement à louer" />

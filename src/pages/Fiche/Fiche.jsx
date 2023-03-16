@@ -6,7 +6,6 @@ import Tag from '../../Components/Tag/Tag'
 import { useLoaderData } from 'react-router-dom'
 
 function Fiche() {
-  /*-----------------Récuperation des donnés du logement selectionné--------------*/
   const { appart } = useLoaderData()
 
   /*-----------------Equipement------------------ */

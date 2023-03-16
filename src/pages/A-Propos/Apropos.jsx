@@ -15,7 +15,6 @@ function Apropos() {
             key={`${dataCollapse}-${index}`}
             contentText={dataCollapse.aboutText}
             headerText={dataCollapse.aboutTitle}
-            page={'about'}
           />
         ))}
       </section>

@@ -368,7 +368,6 @@ body {
 }
 .collapse__content {
   overflow: hidden;
-  height: 0px;
   transition: height ease 0.3s;
 }
 .collapse__content__son {
