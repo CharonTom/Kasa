@@ -5,7 +5,7 @@ function Rating({ score }) {
   const stars = [1, 2, 3, 4, 5]
   return (
     <div className="stars">
-      {stars.map((level, index) =>
+      {stars.map((level) =>
         score >= level ? (
           <div key={level.toString()}>{fullStar}</div>
         ) : (

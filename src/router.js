@@ -52,7 +52,7 @@ const rooter = createBrowserRouter(
         element={<Apropos />}
         loader={async () => {
           const { data } = await axios.get(
-            `http://localhost:3000/data/collapseData.json`
+            `http://localhost:3000/data/collapsedata.json`
           )
 
           if (data === undefined || data === null) {
