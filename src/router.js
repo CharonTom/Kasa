@@ -18,7 +18,7 @@ const rooter = createBrowserRouter(
         element={<Home />}
         loader={async () => {
           const { data } = await axios.get(
-            `http://localhost:3000/data/data.json`
+            `https://charontom.github.io/Kasa/data/data.json`
           )
 
           if (data === undefined || data === null) {
