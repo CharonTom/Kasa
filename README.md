@@ -1,12 +1,12 @@
 # Projet 7 : Kasa
 
-![Banniere Kanap](https://github.com/CharonTom/Kasa/blob/main/src/assets/readmeImage.png)
+![Banniere Kasa](https://github.com/CharonTom/Kasa/blob/main/src/assets/readmeImage.png)
 
 Ceci est le septième projet de ma formation OpenClassRooms.
 
-### J'ai créer une application web de location immobilière avec React
+### J'ai créé une application web de location immobilière avec React
 
-Kasa est dans le métier de la location d’appartements entre particuliers
+![Screenshots](https://github.com/CharonTom/Kasa/blob/main/src/assets/screenshots-kasa.jpg)
 
 ### Technologies utilisées :
 
@@ -14,6 +14,11 @@ Kasa est dans le métier de la location d’appartements entre particuliers
 - HTML / CSS
 - Javascript
 - Sass
+
+### Compétences requises :
+
+- Créer un projet React et développer l’ensemble de l’application, les composants React, les routes React Router.
+- Intégrer les maquettes réalisées par un designer UX depuis l'outil de design Figma.
 
 ---
 
