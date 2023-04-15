@@ -18,7 +18,7 @@ const rooter = createBrowserRouter(
         element={<Home />}
         loader={async () => {
           const { data } = await axios.get(
-            `http://localhost:3000/data/data.json`
+            `https://charontom.github.io/data/data.json`
           )
 
           if (data === undefined || data === null) {
@@ -36,7 +36,7 @@ const rooter = createBrowserRouter(
             throw new Response('not found', { status: 404 })
           }
           const { data } = await axios.get(
-            `http://localhost:3000/data/data.json`
+            `https://charontom.github.io/data/data.json`
           )
 
           const appart = data.find((appart) => appart.id === id)
@@ -52,7 +52,7 @@ const rooter = createBrowserRouter(
         element={<Apropos />}
         loader={async () => {
           const { data } = await axios.get(
-            `http://localhost:3000/data/collapsedata.json`
+            `https://charontom.github.io/data/collapsedata.json`
           )
 
           if (data === undefined || data === null) {
