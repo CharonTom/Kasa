@@ -15,6 +15,7 @@ const rooter = createBrowserRouter(
     <Route path="/" element={<Layouts />}>
       <Route
         index
+        path="/Kasa"
         element={<Home />}
         loader={async () => {
           const { data } = await axios.get(
