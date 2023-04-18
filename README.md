@@ -6,7 +6,7 @@ Ceci est le septième projet de ma formation OpenClassRooms.
 
 ### J'ai créé une application web de location immobilière avec React
 
-![Screenshots](https://github.com/CharonTom/Kasa/blob/main/src/assets/screenshots-kasa.jpg)
+![Screenshots] https://github.com/CharonTom/my-website/blob/main/src/images/kasa.png)
 
 ### Technologies utilisées :
 
