@@ -6,7 +6,23 @@ Ceci est le septième projet de ma formation OpenClassRooms.
 
 ### J'ai créé une application web de location immobilière avec React
 
+Kasa est une application web de location immobilière. Ce projet est entièrement développer sur React est la gestion des évenements est faite sans librairie. Les maquettes à intégrer ont été réalisées par un designer UI depuis l'outil de design Figma.
+
 ![Screenshots](https://github.com/CharonTom/my-website/blob/main/src/images/kasa.png)
+
+### Contraintes React Router :
+
+● Les paramètres des routes sont gérés par React Router dans l'URL pour récupérer les informations de chaque logement.
+
+● Il existe une page par route.
+
+● La page 404 est renvoyée pour chaque route inexistante, ou si une valeur présente dans l’URL ne fait pas partie des données renseignées.
+
+● La logique du routeur est réunie dans un seul fichier.
+
+J'ai utilisé les dernières fonctionnalités de React Router 6.4 pour mon routing qui propose entre autres le call d'API directement depuis l'aborescence des routes.
+
+
 
 ### Technologies utilisées :
 
