@@ -8,7 +8,7 @@ Ceci est le septième projet de ma formation OpenClassRooms.
 
 Kasa est une application web de location immobilière. Ce projet est entièrement développer sur React est la gestion des évenements est faite sans librairie. Les maquettes à intégrer ont été réalisées par un designer UI depuis l'outil de design Figma.
 
-![Screenshots](https://github.com/CharonTom/my-website/blob/main/src/images/kasa.png)
+![Screenshots](https://github.com/CharonTom/my-website/blob/main/src/assets/img/kasa.png)
 
 ### Contraintes React Router :
 
