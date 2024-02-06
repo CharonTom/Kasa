@@ -1,7 +1,9 @@
-# Projet 7 : Kasa
+# <p align="center">Projet 7 : Kasa</p>
 
-![Banniere Kasa](https://github.com/CharonTom/Kasa/blob/main/src/assets/readmeImage.png)
-
+<p align="center">
+<img src="https://github.com/CharonTom/Kasa/blob/main/src/assets/readmeImage.png" alt="application sur pc et mobile"/>
+</p>
+<br/>
 Ceci est le septième projet de ma formation OpenClassRooms.
 
 ### J'ai créé une application web de location immobilière avec React
